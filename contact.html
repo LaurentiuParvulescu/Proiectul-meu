@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASCHF-R Filiala București</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <!-- Font Awesome & Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- === NAVBAR === -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.jpg" alt="Logo" /></a>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="btn-nav home"><i class="bi bi-house-door-fill"></i> Acasă</a></li>
+        <li><a href="desprenoi.html" class="btn-nav about"><i class="bi bi-info-circle-fill"></i> Despre Noi</a></li>
+        <li><a href="proiecte.html" class="btn-nav projects"><i class="bi bi-briefcase-fill"></i> Proiecte</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="btn-nav activities" onclick="toggleDropdown(this)">
+            <i class="bi bi-calendar-event-fill"></i> Activități
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="ziuafemeii.html"><i class="bi bi-gender-female"></i> Ziua Internationala a Femeii</a></li>
+            <li><a href="sarbatoareapascala.html"><i class="bi bi-egg-fill"></i> Sărbătoarea Pascală</a></li>
+            <li><a href="ziuacopilului.html"><i class="bi bi-emoji-smile-fill"></i> Ziua Internațională a Copilului</a></li>
+            <li><a href="tabara.html"><i class="bi bi-tree-fill"></i> Tabara</a></li>
+            <li><a href="ziuaperdizabilitati.html"><i class="bi bi-universal-access-circle"></i> Ziua Internațională a persoanelor cu Dizabilitati</a></li>
+            <li><a href="craciun.html"><i class="bi bi-gift-fill"></i> Crăciun</a></li>
+          </ul>
+        </li>
+        <li><a href="implicate.html" class="btn-nav involve"><i class="bi bi-people-fill"></i> Implică-te</a></li>
+        <li><a href="contact.html" class="btn-nav contact"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- === SLIDER === -->
+  <div class="slideshow-container" id="slider">
+    <div class="slide fade"><img src="images/slider1.jpg" alt="Imagine 1" /></div>
+    <div class="slide fade"><img src="images/slider2.jpg" alt="Imagine 2" /></div>
+    <div class="slide fade"><img src="images/slider3.jpg" alt="Imagine 3" /></div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+
+  <!-- === CONTACT SECTION === -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Info</h2>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-text">
+            <strong>Address:</strong>
+            <span>Str Tepes Voda, nr. 86, sector 2, Bucuresti</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-phone"></i></div>
+          <div class="info-text">
+            <strong>Telefon fix</strong>
+            <span>021.320.2874</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="info-text">
+            <strong>Mobil</strong>
+            <span>0770.197.592</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="info-text">
+            <strong>Email:</strong>
+            <span>office@aschfrbucuresti.ro</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fab fa-facebook-f"></i></div>
+          <div class="info-text">
+            <strong>Facebook</strong>
+            <span>
+              <a href="https://www.facebook.com/people/Aschfr-R-Filiala-Bucuresti-Office/100088288974151/" target="_blank">
+                ASCHF-R Filiala București
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Formular de Contact</h2>
+       <form id="contactForm">
+  <div class="form-group">
+    <label for="name">Nume *</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="email-select">Trimite către *</label>
+    <select id="email-select" name="email" required>
+      <option value="">Alege destinatarul</option>
+      <option value="aschfrbucuresti@yahoo.com">aschfrbucuresti@yahoo.com</option>
+      <option value="secretariat.filialabucuresti@yahoo.com">secretariat.filialabucuresti@yahoo.com</option>
+      <option value="office@aschfrbucuresti.ro">office@aschfrbucuresti.ro</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="phone">Telefon *</label>
+    <input type="tel" id="phone" name="phone" required>
+  </div>
+  <div class="form-group">
+    <label for="subject">Subiect *</label>
+    <input type="text" id="subject" name="subject" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Mesaj *</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <div class="form-actions">
+    <button type="submit">Trimite</button>
+  </div>
+</form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- === TABEL CD === -->
+  <section class="contact-table-section">
+    <h2>Consiliul Director (CD)</h2>
+    <div class="table-wrapper">
+      <table class="contact-table">
+        <thead>
+          <tr>
+            <th>Nume</th><th>Funcție</th><th>Email</th><th>Telefon</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Doina Prutu</td><td>Președinte</td><td>doinacristesku@yahoo.com</td><td>021.320.2874</td></tr>
+          <tr><td>Mioara Parvulescu</td><td>Vicepreședinte</td><td>office@aschfrbucuresti.ro</td><td>0765.118.386</td></tr>
+          <tr><td>Cristina Ion</td><td>Membru</td><td></td><td>0723.932.141</td></tr>
+          <tr><td>Liliana Neacșu</td><td>Membru</td><td>neacsuliliana711@gamil.com</td><td>0724.050.371</td></tr>
+          <tr><td>Victoria Hagianu</td><td>Membru</td><td>victoriahagianu@yahoo.com</td><td>0723.245.358</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- === FOOTER === -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Despre noi</h3>
+        <p>ASCHF – R Filiala Bucureşti este o organizaţie neguvernamentală, înfiinţată în primii ani de după revoluţie.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Navigare rapidă</h3>
+        <ul>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="desprenoi.html">Despre Noi</a></li>
+          <li><a href="proiecte.html">Proiecte</a></li>
+          <li><a href="implicate.html">Implica-te</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: office@aschfrbucuresti.ro</p>
+        <p>Telefon: 021.320.2874</p>
+        <p>Str. Țepeș Vodă, nr. 86, sector 2, București</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <p>&copy; 2025 ASCHF-R Filiala București. Toate drepturile rezervate.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-logo">
+          <a href="index.html"><img src="images/logo.jpg" alt="Logo" style="height: 60px;" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === SCRIPT === -->
+  <script src="script.js"></script>
+</body>
+</html>

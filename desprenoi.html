@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASCHF-R Filiala București</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <!-- Font Awesome & Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- === NAVBAR === -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.jpg" alt="Logo" /></a>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="btn-nav home"><i class="bi bi-house-door-fill"></i> Acasă</a></li>
+        <li><a href="desprenoi.html" class="btn-nav about"><i class="bi bi-info-circle-fill"></i> Despre Noi</a></li>
+        <li><a href="proiecte.html" class="btn-nav projects"><i class="bi bi-briefcase-fill"></i> Proiecte</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="btn-nav activities" onclick="toggleDropdown(this)">
+            <i class="bi bi-calendar-event-fill"></i> Activități
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="ziuafemeii.html"><i class="bi bi-gender-female"></i> Ziua Internationala a Femeii</a></li>
+            <li><a href="sarbatoareapascala.html"><i class="bi bi-egg-fill"></i> Sărbătoarea Pascală</a></li>
+            <li><a href="ziuacopilului.html"><i class="bi bi-emoji-smile-fill"></i> Ziua Internațională a Copilului</a></li>
+            <li><a href="tabara.html"><i class="bi bi-tree-fill"></i> Tabara</a></li>
+            <li><a href="ziuaperdizabilitati.html"><i class="bi bi-universal-access-circle"></i> Ziua Internațională a persoanelor cu Dizabilitati</a></li>
+            <li><a href="craciun.html"><i class="bi bi-gift-fill"></i> Crăciun</a></li>
+          </ul>
+        </li>
+        <li><a href="implicate.html" class="btn-nav involve"><i class="bi bi-people-fill"></i> Implică-te</a></li>
+        <li><a href="contact.html" class="btn-nav contact"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- === SLIDER === -->
+  <div class="slideshow-container" id="slider">
+    <div class="slide fade"><img src="images/slider1.jpg" alt="Imagine 1" /></div>
+    <div class="slide fade"><img src="images/slider2.jpg" alt="Imagine 2" /></div>
+    <div class="slide fade"><img src="images/slider3.jpg" alt="Imagine 3" /></div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+
+<!-- === SECȚIUNE CU CARDURI INTERACTIVE === -->
+<header class="header">
+  <!-- Card 1: Descriere generală -->
+  <div class="card" onclick="updateContent(
+    'O scurtă descriere',
+    'ASCHF – R Filiala Bucureşti este o organizaţie neguvernamentală, înfiinţată în primii ani de după revoluţie. Membrii asociaţiei sunt părinţi care au în îngrijire copii şi tineri cu dizabilități neuromotorii severe. În cadrul asociaţiei, părinții si-au unit forţele pentru a reprezenta cât mai bine interesele şi nevoile acestei categorii. Suntem alături de părinţii mai tineri care au nevoie de suport moral pentru a depăşi trauma firească. Suntem prezenţi în comunitate cu acţiuni de socializare şi colaborăm cu autorităţile pentru aplicarea legislaţiei. ASCHF-R Bucureşti este o organizaţie neguvernamentală, non profit şi apolitică.',
+    'images/logo.jpg',
+    'images/logo.jpg'
+  )">
+    <span class="emoji">📜</span>
+    <h3 class="title title1">O scurtă descriere</h3>
+    </div>
+
+  <!-- Card 2: Acreditare -->
+  <div class="card" onclick="updateContent(
+    'Acreditare',
+    'Informații despre procesul de acreditare.',
+    'images/acreditare.jpg',
+    'pdfs/Acreditare.pdf'
+  )">
+  <span class="emoji">🏛️</span>
+  <h3 class="title title2">Acreditare</h3>
+  </div>
+
+  <!-- Card 3: Formular 164 -->
+  <div class="card" onclick="updateContent(
+    'Formular 164',
+    'Informații despre formularul 164.',
+    'images/formular164.jpg',
+    'pdfs/Formular164-.pdf'
+  )">
+ <span class="emoji">📄</span>
+  <h3 class="title title3">Formular 164</h3>
+  </div>
+
+  <!-- Card 4: Registrul Asociațiilor -->
+  <div class="card" onclick="updateContent(
+    'Reg. Asoc. și Fundațiilor',
+    'Informații despre Registrul Asociațiilor și Fundațiilor.',
+    'images/regasoc.jpg',
+    'pdfs/RegAsocSiFundatii.pdf'
+  )">
+     <span class="emoji">📁</span>
+  <h3 class="title title4">Reg. Asoc. și Fundațiilor</h3>
+  </div>
+</header>
+
+<!-- === SECȚIUNE DE CONȚINUT DINAMIC === -->
+<main class="main">
+  <!-- Text și titlu actualizabil -->
+  <section class="content">
+    <h1 id="title">Alege o opțiune de mai sus</h1>
+    <p id="description">Apasă pe una dintre secțiuni pentru a afișa conținutul relevant.</p>
+  </section>
+
+  <!-- Imagine + link descărcare document -->
+  <aside class="image">
+    <a id="download-link" href="#" target="_blank" download>
+      <img id="document-image" />
+    </a>
+  </aside>
+</main>
+  <!-- === FOOTER === -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Despre noi</h3>
+        <p>ASCHF – R Filiala Bucureşti este o organizaţie neguvernamentală, înfiinţată în primii ani de după revoluţie.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Navigare rapidă</h3>
+        <ul>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="desprenoi.html">Despre Noi</a></li>
+          <li><a href="proiecte.html">Proiecte</a></li>
+          <li><a href="implicate.html">Implica-te</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: office@aschfrbucuresti.ro</p>
+        <p>Telefon: 021.320.2874</p>
+        <p>Str. Țepeș Vodă, nr. 86, sector 2, București</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <p>&copy; 2025 ASCHF-R Filiala București. Toate drepturile rezervate.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-logo">
+          <a href="index.html"><img src="images/logo.jpg" alt="Logo" style="height: 60px;" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === SCRIPT === -->
+  <script src="script.js"></script>
+</body>
+</html>
